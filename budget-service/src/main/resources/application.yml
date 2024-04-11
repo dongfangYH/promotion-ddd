@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: budget-service
+  datasource:
+    url: jdbc:postgresql://localhost:5432/docker
+    username: docker
+    password: docker
+    driver-class-name: org.postgresql.Driver
+  kafka:
+    bootstrap-servers: 127.0.0.1:9092
+  jackson:
+    time-zone: GMT+8
+  jpa:
+    hibernate:
+      ddl-auto: create
+    database: postgresql
+
+eureka:
+  client:
+    service-url:
+      default-zone: http://localhost:8761/eureka
+server:
+  port: 7779
+
+springdoc:
+  api-docs:
+    path: /api-docs
